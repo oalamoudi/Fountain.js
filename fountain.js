@@ -233,12 +233,12 @@
         case 'contact': title_page.push('<p class=\"contact\">' + token.text + '</p>'); break;
         case 'copyright': title_page.push('<p class=\"copyright\">' + token.text + '</p>'); break;
 
-        case 'scene_heading': html.push('<h3' + (token.scene_number ? ' id=\"' + token.scene_number + '\">' : '>') + token.text + '</h3>'); break;
+        case 'scene_heading': html.push('<h3 class=\"scene-heading\"' + (token.scene_number ? ' id=\"' + token.scene_number + '\">' : '>') + token.text + '</h3>'); break;
         case 'transition': html.push('<h2>' + token.text + '</h2>'); break;
 
         case 'dual_dialogue_begin': html.push('<div class=\"dual-dialogue\">'); break;
         case 'dialogue_begin': html.push('<div class=\"dialogue' + (token.dual ? ' ' + token.dual : '') + '\">'); break;
-        case 'character': html.push('<h4>' + token.text + '</h4>'); break;
+        case 'character': html.push('<h4 class=\"character\">' + token.text + '</h4>'); break;
         case 'parenthetical': html.push('<p class=\"parenthetical\">' + token.text + '</p>'); break;
         case 'dialogue': html.push('<p>' + token.text + '</p>'); break;
         case 'dialogue_end': html.push('</div> '); break;
@@ -251,7 +251,7 @@
         case 'boneyard_begin': html.push('<!-- '); break;
         case 'boneyard_end': html.push(' -->'); break;
 
-        case 'action': html.push('<p>' + token.text + '</p>'); break;
+        case 'action': html.push('<p class=\"action\">' + token.text + '</p>'); break;
         case 'centered': html.push('<p class=\"centered\">' + token.text + '</p>'); break;
         
         case 'page_break': html.push('<hr />'); break;
