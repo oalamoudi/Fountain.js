@@ -234,13 +234,13 @@
         case 'copyright': title_page.push('<p class=\"copyright\">' + token.text + '</p>'); break;
 
         case 'scene_heading': html.push('<h3 class=\"scene-heading\"' + (token.scene_number ? ' id=\"' + token.scene_number + '\">' : '>') + token.text + '</h3>'); break;
-        case 'transition': html.push('<h2>' + token.text + '</h2>'); break;
+        case 'transition': html.push('<h2 class=\"transition\">' + token.text + '</h2>'); break;
 
         case 'dual_dialogue_begin': html.push('<div class=\"dual-dialogue\">'); break;
         case 'dialogue_begin': html.push('<div class=\"dialogue' + (token.dual ? ' ' + token.dual : '') + '\">'); break;
         case 'character': html.push('<h4 class=\"character\">' + token.text + '</h4>'); break;
         case 'parenthetical': html.push('<p class=\"parenthetical\">' + token.text + '</p>'); break;
-        case 'dialogue': html.push('<p>' + token.text + '</p>'); break;
+        case 'dialogue': html.push('<p class=\"dialogue\">' + token.text + '</p>'); break;
         case 'dialogue_end': html.push('</div> '); break;
         case 'dual_dialogue_end': html.push('</div> '); break;
 
